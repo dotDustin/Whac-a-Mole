@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:WhackAMole.xcodeproj">
+      location = "self:/Users/dustinm/Documents/myCodeProjects/WhackAMole/WhacAMole.xcodeproj">
    </FileRef>
 </Workspace>

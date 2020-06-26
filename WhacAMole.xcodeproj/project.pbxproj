@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D9D8B06824A5A96B00A89B2C /* WhackAMole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhackAMole.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9D8B06824A5A96B00A89B2C /* WhacAMole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhacAMole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D8B06B24A5A96B00A89B2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9D8B06D24A5A96B00A89B2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D9D8B06F24A5A96C00A89B2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		D9D8B05F24A5A96B00A89B2C = {
 			isa = PBXGroup;
 			children = (
-				D9D8B06A24A5A96B00A89B2C /* WhackAMole */,
+				D9D8B06A24A5A96B00A89B2C /* WhacAMole */,
 				D9D8B06924A5A96B00A89B2C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		D9D8B06924A5A96B00A89B2C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D9D8B06824A5A96B00A89B2C /* WhackAMole.app */,
+				D9D8B06824A5A96B00A89B2C /* WhacAMole.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D9D8B06A24A5A96B00A89B2C /* WhackAMole */ = {
+		D9D8B06A24A5A96B00A89B2C /* WhacAMole */ = {
 			isa = PBXGroup;
 			children = (
 				D9D8B06B24A5A96B00A89B2C /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				D9D8B07624A5A97E00A89B2C /* LaunchScreen.storyboard */,
 				D9D8B07924A5A97E00A89B2C /* Info.plist */,
 			);
-			path = WhackAMole;
+			path = WhacAMole;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D9D8B06724A5A96B00A89B2C /* WhackAMole */ = {
+		D9D8B06724A5A96B00A89B2C /* WhacAMole */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D9D8B07C24A5A97E00A89B2C /* Build configuration list for PBXNativeTarget "WhackAMole" */;
+			buildConfigurationList = D9D8B07C24A5A97E00A89B2C /* Build configuration list for PBXNativeTarget "WhacAMole" */;
 			buildPhases = (
 				D9D8B06424A5A96B00A89B2C /* Sources */,
 				D9D8B06524A5A96B00A89B2C /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = WhackAMole;
+			name = WhacAMole;
 			productName = WhackAMole;
-			productReference = D9D8B06824A5A96B00A89B2C /* WhackAMole.app */;
+			productReference = D9D8B06824A5A96B00A89B2C /* WhacAMole.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D9D8B06324A5A96B00A89B2C /* Build configuration list for PBXProject "WhackAMole" */;
+			buildConfigurationList = D9D8B06324A5A96B00A89B2C /* Build configuration list for PBXProject "WhacAMole" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D9D8B06724A5A96B00A89B2C /* WhackAMole */,
+				D9D8B06724A5A96B00A89B2C /* WhacAMole */,
 			);
 		};
 /* End PBXProject section */
@@ -286,13 +286,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KHTC3WZ3S9;
-				INFOPLIST_FILE = WhackAMole/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WhacAMole/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dm.WhackAMole;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = dm.WhacAMole;
+				PRODUCT_NAME = WhacAMole;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,13 +304,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KHTC3WZ3S9;
-				INFOPLIST_FILE = WhackAMole/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WhacAMole/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dm.WhackAMole;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = dm.WhacAMole;
+				PRODUCT_NAME = WhacAMole;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,7 +319,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D9D8B06324A5A96B00A89B2C /* Build configuration list for PBXProject "WhackAMole" */ = {
+		D9D8B06324A5A96B00A89B2C /* Build configuration list for PBXProject "WhacAMole" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D9D8B07A24A5A97E00A89B2C /* Debug */,
@@ -328,7 +328,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D9D8B07C24A5A97E00A89B2C /* Build configuration list for PBXNativeTarget "WhackAMole" */ = {
+		D9D8B07C24A5A97E00A89B2C /* Build configuration list for PBXNativeTarget "WhacAMole" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D9D8B07D24A5A97E00A89B2C /* Debug */,
