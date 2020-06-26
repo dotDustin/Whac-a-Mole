@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var playButton: UIButton!
     
+    @IBOutlet var screenTapped: UITapGestureRecognizer!
+    
     //mole image from: Icons made by <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
     
     //hammer image from: Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
     // MARK: - Constants and Variables
     var score: Int = 0
     var countdown: Int = 10
+    var moleArray: [UIImageView] = []
     
     // MARK: - Lifecycle
     
@@ -46,6 +49,20 @@ class ViewController: UIViewController {
         
         timerLabel.text = "\(countdown)"
         scoreLabel.text = "\(score)"
+        
+        moleArray = [moleOne, moleTwo, moleThree, moleFour, moleFive, moleSix, moleSeven, moleEight, moleNine]
+        
+        moleOne.addGestureRecognizer(screenTapped)
+        moleTwo.addGestureRecognizer(screenTapped)
+        moleThree.addGestureRecognizer(screenTapped)
+        
+        moleFour.addGestureRecognizer(screenTapped)
+        moleFive.addGestureRecognizer(screenTapped)
+        moleSix.addGestureRecognizer(screenTapped)
+        
+        moleSeven.addGestureRecognizer(screenTapped)
+        moleEight.addGestureRecognizer(screenTapped)
+        moleNine.addGestureRecognizer(screenTapped)
         
     }
     
@@ -60,24 +77,33 @@ class ViewController: UIViewController {
         
     }
     
+    func randomMoles() {
+        for mole in moleArray {
+            let randomNumber = Int.random(in: 0 ... 10)
+            if randomNumber > 2 {
+                mole.isHidden = true
+            } else {
+                mole.isHidden = false
+            }
+        }
+    }
+    
     @objc func updateCounter() {
         if countdown > 0 {
             countdown -= 1
             timerLabel.text = "\(countdown)"
+            randomMoles()
         }
     }
     
     // MARK: - Actions
     
     @IBAction func playButtonPressed(_ sender: Any) {
+        scoreLabel.text = "0"
+        randomMoles()
         countdownClock()
         playButton.isHidden = true
     }
     
-    
-    
-    
-
-
 }
 

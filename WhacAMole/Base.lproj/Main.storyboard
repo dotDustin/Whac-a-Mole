@@ -21,56 +21,56 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="P6k-dO-xzK">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="P6k-dO-xzK">
                                 <rect key="frame" x="20.666666666666671" y="181.66666666666666" width="119.00000000000001" height="118.99999999999997"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="P6k-dO-xzK" secondAttribute="height" multiplier="1:1" id="QNh-n5-pNE"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="KDx-TO-prJ">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="KDx-TO-prJ">
                                 <rect key="frame" x="147.66666666666666" y="181.66666666666666" width="118.99999999999997" height="118.99999999999997"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="KDx-TO-prJ" secondAttribute="height" multiplier="1:1" id="eka-Ts-M2v"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="JLD-Nk-eB8">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="JLD-Nk-eB8">
                                 <rect key="frame" x="274.66666666666669" y="181.66666666666666" width="119" height="118.99999999999997"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JLD-Nk-eB8" secondAttribute="height" multiplier="1:1" id="K1P-ee-y7n"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="Ihm-wP-3no">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="Ihm-wP-3no">
                                 <rect key="frame" x="20.666666666666671" y="308.66666666666669" width="119.00000000000001" height="119"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ihm-wP-3no" secondAttribute="height" multiplier="1:1" id="fkG-Ot-vz7"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="rhY-0c-Nkj">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="rhY-0c-Nkj">
                                 <rect key="frame" x="147.66666666666666" y="308.66666666666669" width="118.99999999999997" height="119"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="119" id="RCR-rk-3bj"/>
                                     <constraint firstAttribute="width" secondItem="rhY-0c-Nkj" secondAttribute="height" multiplier="1:1" id="lQu-JZ-sft"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="PLz-Dm-HYj">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="PLz-Dm-HYj">
                                 <rect key="frame" x="274.66666666666669" y="308.66666666666669" width="119" height="119"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="PLz-Dm-HYj" secondAttribute="height" multiplier="1:1" id="Igj-Ir-C0p"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="9Q5-UD-PSv">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="9Q5-UD-PSv">
                                 <rect key="frame" x="20.666666666666671" y="435.66666666666669" width="119.00000000000001" height="119.00000000000006"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9Q5-UD-PSv" secondAttribute="height" multiplier="1:1" id="RgT-ke-dv1"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="YWm-mm-yIC">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="YWm-mm-yIC">
                                 <rect key="frame" x="147.66666666666666" y="435.66666666666669" width="118.99999999999997" height="119.00000000000006"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="YWm-mm-yIC" secondAttribute="height" multiplier="1:1" id="HnG-NO-Vsc"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="0Fc-ue-3oa">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mole" translatesAutoresizingMaskIntoConstraints="NO" id="0Fc-ue-3oa">
                                 <rect key="frame" x="274.66666666666669" y="435.66666666666669" width="119" height="119.00000000000006"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JSm-gl-FVe">
@@ -103,6 +103,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="0Fc-ue-3oa" firstAttribute="centerY" secondItem="YWm-mm-yIC" secondAttribute="centerY" id="2sN-AV-yxK"/>
                             <constraint firstItem="rhY-0c-Nkj" firstAttribute="top" secondItem="PLz-Dm-HYj" secondAttribute="top" id="35I-ou-h1C"/>
@@ -139,6 +140,9 @@
                             <constraint firstItem="rhY-0c-Nkj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yZ4-Xw-beM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="q6v-AB-DDa" appends="YES" id="Xrv-UW-p7i"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="moleEight" destination="YWm-mm-yIC" id="hon-kp-2bD"/>
@@ -152,10 +156,12 @@
                         <outlet property="moleTwo" destination="KDx-TO-prJ" id="d10-fj-VBT"/>
                         <outlet property="playButton" destination="mhS-GL-jYV" id="WVt-TL-S94"/>
                         <outlet property="scoreLabel" destination="l5a-1J-A9Z" id="4RC-LT-4gF"/>
+                        <outlet property="screenTapped" destination="q6v-AB-DDa" id="EPL-RR-ytk"/>
                         <outlet property="timerLabel" destination="8S9-eB-4BS" id="6AV-gp-5vN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="q6v-AB-DDa"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
