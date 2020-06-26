@@ -90,6 +90,17 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhS-GL-jYV">
+                                <rect key="frame" x="145" y="584.66666666666663" width="124" height="34"/>
+                                <color key="backgroundColor" red="0.3294117647" green="0.34901960780000002" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="  Push to Play!  ">
+                                    <color key="titleColor" red="0.74901960779999999" green="0.67843137249999996" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1q8-KZ-ElL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -104,6 +115,7 @@
                             <constraint firstItem="PLz-Dm-HYj" firstAttribute="leading" secondItem="rhY-0c-Nkj" secondAttribute="trailing" constant="8" id="Ioa-un-wnI"/>
                             <constraint firstItem="rhY-0c-Nkj" firstAttribute="leading" secondItem="Ihm-wP-3no" secondAttribute="trailing" constant="8" id="JOK-wc-yYh"/>
                             <constraint firstItem="0Fc-ue-3oa" firstAttribute="leading" secondItem="YWm-mm-yIC" secondAttribute="trailing" constant="8" id="QoL-aX-kpP"/>
+                            <constraint firstItem="mhS-GL-jYV" firstAttribute="top" secondItem="YWm-mm-yIC" secondAttribute="bottom" constant="30" id="SS2-RT-Ei9"/>
                             <constraint firstItem="rhY-0c-Nkj" firstAttribute="trailing" secondItem="YWm-mm-yIC" secondAttribute="trailing" id="TAa-A9-ZLn"/>
                             <constraint firstItem="rhY-0c-Nkj" firstAttribute="leading" secondItem="YWm-mm-yIC" secondAttribute="leading" id="TF3-NA-MCs"/>
                             <constraint firstItem="KDx-TO-prJ" firstAttribute="leading" secondItem="P6k-dO-xzK" secondAttribute="trailing" constant="8" id="ZZf-ZW-DKG"/>
@@ -120,6 +132,7 @@
                             <constraint firstItem="8S9-eB-4BS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="rY8-3r-MHc"/>
                             <constraint firstItem="rhY-0c-Nkj" firstAttribute="leading" secondItem="KDx-TO-prJ" secondAttribute="leading" id="rsY-CA-uwq"/>
                             <constraint firstItem="JLD-Nk-eB8" firstAttribute="leading" secondItem="KDx-TO-prJ" secondAttribute="trailing" constant="8" id="srk-M6-32e"/>
+                            <constraint firstItem="mhS-GL-jYV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="syf-9F-E2C"/>
                             <constraint firstItem="JSm-gl-FVe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uVm-H1-3hA"/>
                             <constraint firstItem="rhY-0c-Nkj" firstAttribute="bottom" secondItem="Ihm-wP-3no" secondAttribute="bottom" id="v28-JY-VHa"/>
                             <constraint firstItem="0Fc-ue-3oa" firstAttribute="top" secondItem="PLz-Dm-HYj" secondAttribute="bottom" constant="8" id="yGa-Jz-kDu"/>
@@ -137,6 +150,7 @@
                         <outlet property="moleSix" destination="PLz-Dm-HYj" id="xbq-6O-CL8"/>
                         <outlet property="moleThree" destination="JLD-Nk-eB8" id="nM2-2Q-wpj"/>
                         <outlet property="moleTwo" destination="KDx-TO-prJ" id="d10-fj-VBT"/>
+                        <outlet property="playButton" destination="mhS-GL-jYV" id="WVt-TL-S94"/>
                         <outlet property="scoreLabel" destination="l5a-1J-A9Z" id="4RC-LT-4gF"/>
                         <outlet property="timerLabel" destination="8S9-eB-4BS" id="6AV-gp-5vN"/>
                     </connections>
