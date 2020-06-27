@@ -29,7 +29,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var playButton: UIButton!
     
-    @IBOutlet var screenTapped: UITapGestureRecognizer!
+    @IBOutlet var moleOneTapGR: UITapGestureRecognizer!
+    @IBOutlet var moleTwoTapGR: UITapGestureRecognizer!
+    @IBOutlet var moleThreeTapGR: UITapGestureRecognizer!
+    
     
     //mole image from: Icons made by <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
     
@@ -41,6 +44,7 @@ class ViewController: UIViewController {
     var score: Int = 0
     var countdown: Int = 10
     var moleArray: [UIImageView] = []
+    var isGameActive = false
     
     // MARK: - Lifecycle
     
@@ -52,17 +56,23 @@ class ViewController: UIViewController {
         
         moleArray = [moleOne, moleTwo, moleThree, moleFour, moleFive, moleSix, moleSeven, moleEight, moleNine]
         
-        moleOne.addGestureRecognizer(screenTapped)
-        moleTwo.addGestureRecognizer(screenTapped)
-        moleThree.addGestureRecognizer(screenTapped)
+        var tapGestureRecognizer: UITapGestureRecognizer {
+            get {
+                return UITapGestureRecognizer(target: self, action: #selector(self.didTapScreen(sender:)))
+            }
+        }
         
-        moleFour.addGestureRecognizer(screenTapped)
-        moleFive.addGestureRecognizer(screenTapped)
-        moleSix.addGestureRecognizer(screenTapped)
+        moleOne.addGestureRecognizer(tapGestureRecognizer)
+        moleTwo.addGestureRecognizer(tapGestureRecognizer)
+        moleThree.addGestureRecognizer(tapGestureRecognizer)
         
-        moleSeven.addGestureRecognizer(screenTapped)
-        moleEight.addGestureRecognizer(screenTapped)
-        moleNine.addGestureRecognizer(screenTapped)
+        moleFour.addGestureRecognizer(tapGestureRecognizer)
+        moleFive.addGestureRecognizer(tapGestureRecognizer)
+        moleSix.addGestureRecognizer(tapGestureRecognizer)
+        
+        moleSeven.addGestureRecognizer(tapGestureRecognizer)
+        moleEight.addGestureRecognizer(tapGestureRecognizer)
+        moleNine.addGestureRecognizer(tapGestureRecognizer)
         
     }
     
@@ -72,6 +82,7 @@ class ViewController: UIViewController {
         if countdown > 0 {
             Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         } else if countdown == 0 {
+            isGameActive = false
             // alert view
         }
         
@@ -81,8 +92,9 @@ class ViewController: UIViewController {
         for mole in moleArray {
             let randomNumber = Int.random(in: 0 ... 10)
             if randomNumber > 2 {
-                mole.isHidden = true
+                mole.image = nil
             } else {
+                mole.image = UIImage(named: "mole.pdf")
                 mole.isHidden = false
             }
         }
@@ -96,6 +108,23 @@ class ViewController: UIViewController {
         }
     }
     
+    @objc func didTapScreen(sender: UITapGestureRecognizer) {
+        print("tapped screen")
+        
+        guard isGameActive else { return }
+        
+        if let tappedMole:UIImageView = sender.view as? UIImageView {
+            if tappedMole.image == nil {
+                tappedMole.image = UIImage(named: "hammer")
+            } else {
+                tappedMole.image = UIImage(named: "boom")
+                score += 1
+                scoreLabel.text = "\(score)"
+            }
+            
+        }
+    }
+    
     // MARK: - Actions
     
     @IBAction func playButtonPressed(_ sender: Any) {
@@ -103,6 +132,7 @@ class ViewController: UIViewController {
         randomMoles()
         countdownClock()
         playButton.isHidden = true
+        isGameActive = true
     }
     
 }
