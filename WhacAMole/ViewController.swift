@@ -30,9 +30,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var playButton: UIButton!
     
-    @IBOutlet var moleOneTapGR: UITapGestureRecognizer!
-    @IBOutlet var moleTwoTapGR: UITapGestureRecognizer!
-    @IBOutlet var moleThreeTapGR: UITapGestureRecognizer!
+    //@IBOutlet var moleOneTapGR: UITapGestureRecognizer!
+    //@IBOutlet var moleTwoTapGR: UITapGestureRecognizer!
+    //@IBOutlet var moleThreeTapGR: UITapGestureRecognizer!
     
     
     //mole image from: Icons made by <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
@@ -138,24 +138,36 @@ class ViewController: UIViewController {
     func showAlert() {
         var message: String = ""
         if score > highScore! {
-            message = "You set a new high score"
+            message = "You set a new high score of \(score)"
             defaults.set(score, forKey: "highScore")
+            highScoreLabel.text = "\(highScore!)"
         } else if score == highScore! {
-            message = "You tied your best score"
+            message = "You tied your best score with \(score)"
         } else {
-            message = "Try again"
+            message = "You scored \(score), not your best"
         }
-        
+        boardReset()
         let alertController = UIAlertController(title: "Game Over", message:
             "\(message)", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
-        playButton.isHidden = false
+        
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func boardReset() {
+        playButton.isHidden = false
+        countdown = 10
+        score = 0
+        timerLabel.text = "--"
+        for mole in moleArray {
+            mole.image = UIImage(named: "mole")
+        }
     }
     
     // MARK: - Actions
     
     @IBAction func playButtonPressed(_ sender: Any) {
+        timerLabel.text = "\(countdown)"
         scoreLabel.text = "0"
         randomMoles()
         countdownClock()
