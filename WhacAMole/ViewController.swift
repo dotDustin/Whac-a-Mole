@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var highScoreLabel: UILabel!
     
     @IBOutlet weak var moleOne: UIImageView!
     @IBOutlet weak var moleTwo: UIImageView!
@@ -41,12 +42,21 @@ class ViewController: UIViewController {
     //whack image from: Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
     
     // MARK: - Constants and Variables
+    let defaults = UserDefaults.standard
     var score: Int = 0
+    var highScore: Int?
     var countdown: Int = 10
     var moleArray: [UIImageView] = []
     var isGameActive = false
+    var gameTimer: Timer?
     
     // MARK: - Lifecycle
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let topScore = defaults.integer(forKey: "highScore")
+        highScore = topScore
+        highScoreLabel.text = "\(highScore!)"
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,12 +90,8 @@ class ViewController: UIViewController {
     
     func countdownClock() {
         if countdown > 0 {
-            Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-        } else if countdown == 0 {
-            isGameActive = false
-            // alert view
+            gameTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         }
-        
     }
     
     func randomMoles() {
@@ -105,12 +111,16 @@ class ViewController: UIViewController {
             countdown -= 1
             timerLabel.text = "\(countdown)"
             randomMoles()
+        } else {
+            gameTimer?.invalidate()
+            isGameActive = false
+            playButton.isHidden = false
+            showAlert()
+            
         }
     }
     
     @objc func didTapScreen(sender: UITapGestureRecognizer) {
-        print("tapped screen")
-        
         guard isGameActive else { return }
         
         if let tappedMole:UIImageView = sender.view as? UIImageView {
@@ -123,6 +133,24 @@ class ViewController: UIViewController {
             }
             
         }
+    }
+    
+    func showAlert() {
+        var message: String = ""
+        if score > highScore! {
+            message = "You set a new high score"
+            defaults.set(score, forKey: "highScore")
+        } else if score == highScore! {
+            message = "You tied your best score"
+        } else {
+            message = "Try again"
+        }
+        
+        let alertController = UIAlertController(title: "Game Over", message:
+            "\(message)", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        playButton.isHidden = false
+        self.present(alertController, animated: true, completion: nil)
     }
     
     // MARK: - Actions
